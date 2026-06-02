@@ -19,8 +19,21 @@
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
   </head>
   <body>
-    <!-- 移除了不符合设计图的 Top Bar，保持首屏极其干净 -->
     <a class="skip-link" href="#main">跳到主要内容</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="{{ '/' | relative_url }}" class="brand">
+          <img src="{{ '/assets/img/CCSU.png' | relative_url }}" alt="CCSU Logo" class="ccsu-logo">
+          <span>Horizon</span>
+        </a>
+        <nav class="site-nav">
+          <a href="#about">关于我们</a>
+          <a href="#members">实验室成员</a>
+          <a href="#projects">开源项目</a>
+        </nav>
+      </div>
+    </header>
 
     <main id="main">
       {{ content }}
