@@ -1,0 +1,29 @@
+- name: "Chrono_Trace"
+  language: "Python"
+  accent: "#4f9bd8"
+  url: "https://github.com/CCSU-Horizon-Lab/Chrono_Trace"
+  description: "源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据，并生成隐私优先的沟通洞察。"
+  tags:
+    - "数据分析"
+    - "隐私优先"
+    - "桌面工具"
+
+- name: "tinc-cluster-manager"
+  language: "PHP"
+  accent: "#5967a8"
+  url: "https://github.com/CCSU-Horizon-Lab/tinc-cluster-manager"
+  description: "面向 Tinc 网络的集群管理工具，帮助更轻量地管理节点、配置和基础设施协作流程。"
+  tags:
+    - "网络管理"
+    - "基础设施"
+    - "Web 工具"
+
+- name: "tinc-cli-gui"
+  language: "C++"
+  accent: "#f05a8f"
+  url: "https://github.com/CCSU-Horizon-Lab/tinc-cli-gui"
+  description: "为命令行网络工具提供更直观的图形界面，让配置、启动和状态查看更适合日常使用。"
+  tags:
+    - "C++"
+    - "GUI"
+    - "效率工具"
