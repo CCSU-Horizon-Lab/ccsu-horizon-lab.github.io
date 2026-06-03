@@ -1,7 +1,17 @@
 {
   "owner": "CCSU-Horizon-Lab",
-  "generated_at": "2026-06-02T13:48:40.362Z",
+  "generated_at": "2026-06-03T08:29:36.052Z",
   "repos": [
+    {
+      "name": "ccsu-horizon-lab.github.io",
+      "description": "CCSU Horzion Lab github page",
+      "html_url": "https://github.com/CCSU-Horizon-Lab/ccsu-horizon-lab.github.io",
+      "language": "CSS",
+      "topics": [],
+      "stargazers_count": 0,
+      "forks_count": 0,
+      "updated_at": "2026-06-02T21:25:08Z"
+    },
     {
       "name": "tinc-ruoyi-manager",
       "description": "Tinc内网穿透（若依框架）",
@@ -52,7 +62,7 @@
       "location": "China",
       "html_url": "https://github.com/Juitar",
       "avatar_url": "https://avatars.githubusercontent.com/u/138417175?v=4",
-      "contributions": 128,
+      "contributions": 133,
       "avatar_path": "assets/data/avatars/Juitar.png"
     },
     {
@@ -122,26 +132,15 @@
       "avatar_path": "assets/data/avatars/ting0514.png"
     },
     {
-      "login": "parrowormsby720-beep",
-      "name": "parrowormsby720-beep",
-      "class_name": "25网安02",
+      "login": "lyy169",
+      "name": "lyy169",
+      "class_name": "22物联01",
       "bio": "",
       "location": "",
-      "html_url": "https://github.com/parrowormsby720-beep",
-      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
+      "html_url": "https://github.com/lyy169",
+      "avatar_url": "https://avatars.githubusercontent.com/u/154583494?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
-    },
-    {
-      "login": "seven006gogogo",
-      "name": "seven006gogogo",
-      "class_name": "25制药04",
-      "bio": "",
-      "location": "",
-      "html_url": "https://github.com/seven006gogogo",
-      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
-      "contributions": 0,
-      "avatar_path": "assets/data/avatars/seven006gogogo.png"
+      "avatar_path": "assets/data/avatars/lyy169.png"
     },
     {
       "login": "vegePeapa",
@@ -155,15 +154,15 @@
       "avatar_path": "assets/data/avatars/vegePeapa.png"
     },
     {
-      "login": "Swittzzued",
-      "name": "Swittzzued",
+      "login": "smiling005",
+      "name": "smiling005",
       "class_name": "25计科02",
       "bio": "",
       "location": "",
-      "html_url": "https://github.com/Swittzzued",
-      "avatar_url": "https://avatars.githubusercontent.com/u/237461362?v=4",
+      "html_url": "https://github.com/smiling005",
+      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/Swittzzued.png"
+      "avatar_path": "assets/data/avatars/smiling005.png"
     },
     {
       "login": "hcc-112",
@@ -177,15 +176,37 @@
       "avatar_path": "assets/data/avatars/hcc-112.png"
     },
     {
-      "login": "smiling005",
-      "name": "smiling005",
+      "login": "parrowormsby720-beep",
+      "name": "parrowormsby720-beep",
+      "class_name": "25网安02",
+      "bio": "",
+      "location": "",
+      "html_url": "https://github.com/parrowormsby720-beep",
+      "avatar_url": "https://avatars.githubusercontent.com/u/274773669?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/parrowormsby720-beep.png"
+    },
+    {
+      "login": "Swittzzued",
+      "name": "Swittzzued",
       "class_name": "25计科02",
       "bio": "",
       "location": "",
-      "html_url": "https://github.com/smiling005",
-      "avatar_url": "https://avatars.githubusercontent.com/u/236506244?v=4",
+      "html_url": "https://github.com/Swittzzued",
+      "avatar_url": "https://avatars.githubusercontent.com/u/237461362?v=4",
       "contributions": 0,
-      "avatar_path": "assets/data/avatars/smiling005.png"
+      "avatar_path": "assets/data/avatars/Swittzzued.png"
+    },
+    {
+      "login": "seven006gogogo",
+      "name": "seven006gogogo",
+      "class_name": "25制药04",
+      "bio": "在学习中",
+      "location": "",
+      "html_url": "https://github.com/seven006gogogo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/243477079?v=4",
+      "contributions": 0,
+      "avatar_path": "assets/data/avatars/seven006gogogo.png"
     }
   ]
 }
