@@ -175,6 +175,7 @@ svg {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--ink-soft);
+  white-space: nowrap;
   transition: color 0.2s;
 }
 
@@ -184,14 +185,19 @@ svg {
 
 /* Hero Section */
 .hero {
+  --hero-horizon-y: 50vh;
+  --hero-art-x: clamp(320px, 30vw, 540px);
+  --hero-sun-w: clamp(280px, 30vw, 380px);
+  --hero-horizon-arc-w: 200vw;
+  --hero-horizon-arc-h: 200vh;
+  --hero-content-right: clamp(28px, 4.5vw, 96px);
+  --hero-content-w: clamp(380px, 38vw, 620px);
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  /* 内容靠右 */
-  padding-right: 4%;
-  /* 右侧留白适当缩小，内容向左靠拢 */
+  padding-right: var(--hero-content-right);
   overflow: hidden;
   background: linear-gradient(135deg, #f8faff 0%, #ffffff 100%);
 }
@@ -210,12 +216,11 @@ svg {
 /* Horizon Arc - Pure Stroke Line without rendering bugs */
 .art-sea-group {
   position: absolute;
-  top: 50vh;
-  /* 地平线顶点与 Horizon 文字垂直中心对齐 */
-  left: -72vw;
-  /* 弧线中心右移至 28vw（原 20vw） */
-  width: 200vw;
-  height: 200vh;
+  top: var(--hero-horizon-y);
+  left: var(--hero-art-x);
+  width: var(--hero-horizon-arc-w);
+  height: var(--hero-horizon-arc-h);
+  transform: translateX(-50%);
   z-index: 3;
   /* 弧线向右渐隐，进入右侧内容区前淡出 */
   -webkit-mask-image: linear-gradient(to right, black 0%, black 55%, transparent 63%);
@@ -236,17 +241,13 @@ svg {
 /* Sun - Sitting ABOVE the horizon, slightly covered by the line */
 .art-sun {
   position: absolute;
-  top: 50vh;
-  /* 与地平线顶点同 Y，使太阳圆心与 Horizon 文字垂直对齐 */
-  left: 28vw;
-  /* 右移 8vw，与弧线中心保持一致 */
+  top: var(--hero-horizon-y);
+  left: var(--hero-art-x);
   /* translate Y by -100% moves the sun ABOVE the line. Add 5px so it dips behind the 10px line */
   transform: translate(-50%, calc(-100% + 5px));
-  width: 30vw;
-  max-width: 380px;
-  height: 15vw;
+  width: var(--hero-sun-w);
+  height: calc(var(--hero-sun-w) / 2);
   /* Semi-circle */
-  max-height: 190px;
   border-radius: 250px 250px 0 0;
   background: linear-gradient(180deg, #ff9d00 0%, #ffb347 100%);
   z-index: 2;
@@ -260,9 +261,9 @@ svg {
 /* Light Blue Ripples floating below the line */
 .art-reflection {
   position: absolute;
-  top: calc(50vh + 30px);
+  top: calc(var(--hero-horizon-y) + 30px);
   /* 水波纹在地平线下方 */
-  left: 28vw;
+  left: var(--hero-art-x);
   /* 与太阳保持同一水平中心 */
   transform: translateX(-50%);
   display: flex;
@@ -277,7 +278,7 @@ svg {
 .art-reflection::before {
   content: "";
   display: block;
-  width: 240px;
+  width: calc(var(--hero-sun-w) * 0.63);
   height: 20px;
   background: #66b2ff;
   border-radius: 50%;
@@ -286,14 +287,14 @@ svg {
 .art-reflection::after {
   content: "";
   display: block;
-  width: 160px;
+  width: calc(var(--hero-sun-w) * 0.42);
   height: 14px;
   background: #66b2ff;
   border-radius: 50%;
 }
 
 .art-reflection-inner {
-  width: 80px;
+  width: calc(var(--hero-sun-w) * 0.21);
   height: 10px;
   background: #66b2ff;
   border-radius: 50%;
@@ -302,14 +303,11 @@ svg {
 /* Hero Content - Placed on the Right */
 .hero__content {
   position: absolute;
-  /* 精确定位到右侧，不依赖 flex 对齐 */
-  right: -2%;
-  /* 允许略微突破常规边界进一步靠右 */
-  top: 50vh;
+  right: var(--hero-content-right);
+  top: var(--hero-horizon-y);
   transform: translateY(-50%);
-  /* 垂直居中于 50vh 处 */
   z-index: 10;
-  width: 40%;
+  width: var(--hero-content-w);
   text-align: left;
 }
 
@@ -1216,6 +1214,50 @@ body.modal-open {
   }
 }
 
+@media (min-width: 769px) and (max-width: 1180px) {
+  .site-header {
+    padding-inline: clamp(16px, 2.2vw, 22px);
+  }
+
+  .header-inner {
+    gap: clamp(18px, 2.6vw, 30px);
+  }
+
+  .site-nav {
+    gap: clamp(14px, 2vw, 20px);
+  }
+
+  .site-nav a {
+    font-size: clamp(0.86rem, 1.45vw, 0.94rem);
+  }
+
+  .hero {
+    --hero-art-x: clamp(260px, 30vw, 340px);
+    --hero-sun-w: clamp(240px, 28vw, 320px);
+    --hero-content-right: clamp(24px, 3.5vw, 44px);
+    --hero-content-w: clamp(330px, 39vw, 430px);
+  }
+
+  .hero__title {
+    font-size: clamp(3.2rem, 6vw, 4.4rem);
+  }
+
+  .hero__tagline {
+    margin-bottom: 34px;
+    letter-spacing: 0.16em;
+  }
+
+  .hero__actions {
+    gap: 14px;
+  }
+
+  .button {
+    height: 52px;
+    padding: 0 26px;
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 900px) {
   .site-header {
     top: 12px;
@@ -1297,7 +1339,10 @@ body.modal-open {
   .hero {
     --mobile-horizon-y: clamp(250px, 37svh, 320px);
     --mobile-sun-w: clamp(210px, 62vw, 300px);
+    --mobile-horizon-arc-w: calc(var(--mobile-sun-w) * 4.4);
+    --mobile-horizon-arc-h: calc(var(--mobile-sun-w) * 2.1);
     --mobile-horizon-mask: calc(var(--mobile-sun-w) * 1.28);
+    --mobile-horizon-mask-half: calc(var(--mobile-horizon-mask) * 0.5);
     min-height: 100svh;
     align-items: center;
     justify-content: flex-end;
@@ -1311,20 +1356,20 @@ body.modal-open {
   .art-sea-group {
     top: var(--mobile-horizon-y);
     left: 50%;
-    width: 210vw;
-    height: 118svh;
+    width: var(--mobile-horizon-arc-w);
+    height: var(--mobile-horizon-arc-h);
     transform: translateX(-50%);
     overflow: hidden;
     -webkit-mask-image: linear-gradient(90deg,
-        transparent calc(50% - var(--mobile-horizon-mask) / 2),
-        black calc(50% - var(--mobile-horizon-mask) / 2 + 24px),
-        black calc(50% + var(--mobile-horizon-mask) / 2 - 24px),
-        transparent calc(50% + var(--mobile-horizon-mask) / 2));
+        transparent calc(50% - var(--mobile-horizon-mask-half)),
+        black calc(50% - var(--mobile-horizon-mask-half) + 24px),
+        black calc(50% + var(--mobile-horizon-mask-half) - 24px),
+        transparent calc(50% + var(--mobile-horizon-mask-half)));
     mask-image: linear-gradient(90deg,
-        transparent calc(50% - var(--mobile-horizon-mask) / 2),
-        black calc(50% - var(--mobile-horizon-mask) / 2 + 24px),
-        black calc(50% + var(--mobile-horizon-mask) / 2 - 24px),
-        transparent calc(50% + var(--mobile-horizon-mask) / 2));
+        transparent calc(50% - var(--mobile-horizon-mask-half)),
+        black calc(50% - var(--mobile-horizon-mask-half) + 24px),
+        black calc(50% + var(--mobile-horizon-mask-half) - 24px),
+        transparent calc(50% + var(--mobile-horizon-mask-half)));
   }
 
   .art-sea-back {
@@ -1590,14 +1635,12 @@ body.modal-open {
   .hero {
     --mobile-horizon-y: clamp(235px, 36svh, 285px);
     --mobile-sun-w: clamp(200px, 66vw, 250px);
+    --mobile-horizon-arc-w: calc(var(--mobile-sun-w) * 4.4);
+    --mobile-horizon-arc-h: calc(var(--mobile-sun-w) * 2.1);
     --mobile-horizon-mask: calc(var(--mobile-sun-w) * 1.3);
+    --mobile-horizon-mask-half: calc(var(--mobile-horizon-mask) * 0.5);
     padding-inline: 14px;
     padding-bottom: 36px;
-  }
-
-  .art-sea-group {
-    width: 220vw;
-    height: 112svh;
   }
 
   .hero__title {
