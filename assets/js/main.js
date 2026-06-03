@@ -85,8 +85,13 @@ async function fetchPublicRepos(owner) {
   if (!Array.isArray(repos)) return [];
 
   return repos
-    .filter((repo) => !repo.private && repo.name !== `${owner}.github.io`)
+    .filter((repo) => !repo.private && !isSiteRepository(repo, owner))
     .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+}
+
+function isSiteRepository(repo, owner) {
+  const repoName = String(repo?.name || "").toLowerCase();
+  return repoName === `${String(owner || "").toLowerCase()}.github.io`;
 }
 
 async function fetchGithubCache(owner) {

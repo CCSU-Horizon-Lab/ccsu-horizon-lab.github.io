@@ -61,8 +61,13 @@ async function fetchPublicRepos() {
   if (!Array.isArray(repos)) return [];
 
   return repos
-    .filter((repo) => !repo.private && repo.name !== `${owner}.github.io`)
+    .filter((repo) => !repo.private && !isSiteRepository(repo))
     .sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+}
+
+function isSiteRepository(repo) {
+  const repoName = String(repo?.name || "").toLowerCase();
+  return repoName === `${owner.toLowerCase()}.github.io`;
 }
 
 async function fetchMembers(repos) {
