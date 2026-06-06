@@ -13,7 +13,16 @@ const marqueeResumeTimers = new WeakMap();
 
 const navLinks = [...document.querySelectorAll(".site-nav a")];
 const sections = navLinks
-  .map((link) => document.querySelector(link.getAttribute("href")))
+  .map((link) => {
+    const href = link.getAttribute("href");
+    if (!href.includes("#")) return null;
+    const hash = href.substring(href.indexOf("#"));
+    try {
+      return document.querySelector(hash);
+    } catch (e) {
+      return null;
+    }
+  })
   .filter(Boolean);
 
 if ("IntersectionObserver" in window && sections.length > 0) {
@@ -26,7 +35,9 @@ if ("IntersectionObserver" in window && sections.length > 0) {
       if (!visible) return;
 
       navLinks.forEach((link) => {
-        link.classList.toggle("is-active", link.getAttribute("href") === `#${visible.target.id}`);
+        const href = link.getAttribute("href");
+        const hash = href.includes("#") ? href.substring(href.indexOf("#")) : href;
+        link.classList.toggle("is-active", hash === `#${visible.target.id}`);
       });
     },
     {

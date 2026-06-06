@@ -1,0 +1,178 @@
+---
+layout: default
+title: "加入我们 - 长大 Horizon 全栈实验室"
+permalink: /join/
+---
+
+<section class="section section--join-hero">
+  <div class="section__heading center">
+    <p class="eyebrow">Recruitment</p>
+    <h1>加入 Horizon 全栈实验室</h1>
+    <p class="section__subtitle">眼界决定方向，代码抵达远方</p>
+  </div>
+</section>
+
+<section class="section section--mission bg-gray-light">
+  <div class="container">
+    <div class="section__heading center">
+      <span class="eyebrow">Our Mission</span>
+      <h2>实验室宗旨</h2>
+    </div>
+    <div class="content-grid">
+      <div class="text-block" style="text-align: center; max-width: 800px; margin: 0 auto;">
+        <p>
+          Horizon 实验室致力于通过<strong>真实的工程实践</strong>，培养具备深度技术功底、卓越协作能力和敏锐创新意识的全栈工程师。
+        </p>
+        <p>
+          我们不满足于“纸上谈兵”，而是主张将每一行代码都写进可运行、可验证、有价值的作品中。我们关注代码的质量、系统的健壮性以及技术的长期价值。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--qualities">
+  <div class="container">
+    <div class="section__heading center">
+      <span class="eyebrow">Qualities</span>
+      <h2>我们寻找的伙伴</h2>
+      <p class="section__desc">比起现有的技术栈，我们更看重一个人的内在品质与成长潜力。</p>
+    </div>
+
+    <div class="detailed-grid">
+      <article class="detailed-card">
+        <h3>热爱与求知欲</h3>
+        <p>对技术世界充满好奇心，不仅关注“怎么做”，更愿意深挖“为什么”。能从解决问题的过程中获得纯粹的快乐。</p>
+      </article>
+      <article class="detailed-card">
+        <h3>极强的自驱力</h3>
+        <p>在没有外界压力的情况下，依然能保持稳定的学习节奏。具备良好的时间管理能力和极强的执行力。</p>
+      </article>
+      <article class="detailed-card">
+        <h3>工程化思维</h3>
+        <p>不仅能写出实现功能的代码，更能考虑到代码的可读性、可维护性和扩展性。重视工具的提效作用。</p>
+      </article>
+      <article class="detailed-card">
+        <h3>开放协作心态</h3>
+        <p>乐于分享自己的所学所悟，勇于接受他人的 Code Review。能通过沟通消除障碍，在团队中发挥“1+1>2”的作用。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--culture bg-gray-light">
+  <div class="container">
+    <div class="section__heading center">
+      <span class="eyebrow">Atmosphere</span>
+      <h2>实验室氛围</h2>
+    </div>
+    <div class="culture-blocks">
+      <div class="culture-item">
+        <h3>平等与开放</h3>
+        <p>在技术面前人人平等。无论是高年级学长还是初出茅庐的新手，都鼓励发表见解，通过事实和逻辑说话。</p>
+      </div>
+      <div class="culture-item">
+        <h3>实战派风格</h3>
+        <p>我们的讨论往往围绕着具体的 Commit、Issue 或文档展开。拒绝空谈，用作品和数据证明价值。</p>
+      </div>
+      <div class="culture-item">
+        <h3>持续迭代</h3>
+        <p>我们相信没有完美的初稿，只有不断的迭代。不仅是项目在迭代，每个人的能力也在不断挑战自我的过程中迭代升级。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--how-to-join" id="apply">
+  <div class="join-panel">
+    <div>
+      <p class="eyebrow">Ready to start?</p>
+      <h2>如何加入我们？</h2>
+      <p>
+        实验室通常在每学年第一学期面向全校计算机相关专业招新。
+        当然，如果你觉得自己已经准备好了，欢迎随时通过 GitHub 提交 PR 或在组织下发起讨论。
+      </p>
+    </div>
+    <div class="join-actions">
+      <a href="{{ site.github_url }}" class="button button--primary" target="_blank" rel="noopener">前往 GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<style>
+/* 针对 join 页面的额外样式，保持与 custom.css 一致的风格 */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.detailed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.detailed-card {
+  padding: 32px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.detailed-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.04);
+}
+
+.detailed-card h3 {
+  margin: 0 0 16px;
+  font-size: 1.25rem;
+  color: var(--ink);
+}
+
+.detailed-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+.culture-blocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.culture-item h3 {
+  font-size: 1.15rem;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+
+.culture-item p {
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.text-block p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--ink-soft);
+  margin-bottom: 24px;
+}
+
+.section--join-hero {
+  padding: 120px 0 80px;
+}
+
+.section--join-hero h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  margin: 16px 0;
+}
+</style>
