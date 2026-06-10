@@ -24,7 +24,7 @@ jobs:
       - name: Generate cache
         run: node scripts/update-github-cache.mjs
         env:
-          GITHUB_OWNER: CCSU-Horizon-Lab
+          GITHUB_OWNER: CCSU-HorizonLab
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit cache

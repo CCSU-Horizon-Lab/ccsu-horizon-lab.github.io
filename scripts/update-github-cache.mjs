@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-const owner = process.env.GITHUB_OWNER || "CCSU-Horizon-Lab";
+const owner = process.env.GITHUB_OWNER || "CCSU-HorizonLab";
 const token = process.env.GITHUB_TOKEN || "";
 const apiBase = "https://api.github.com";
 const outputPath = path.join("assets", "data", "github.json");

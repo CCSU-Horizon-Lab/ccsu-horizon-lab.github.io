@@ -1,11 +1,11 @@
 {
-  "owner": "CCSU-Horizon-Lab",
+  "owner": "CCSU-HorizonLab",
   "generated_at": "2026-06-09T20:21:03.814Z",
   "repos": [
     {
       "name": "Chrono_Trace",
       "description": "Chrono Trace 是一个源码可见、限非商业使用的本地桌面工具，用于分析已获授权的微信聊天数据并生成隐私优先的沟通洞察。",
-      "html_url": "https://github.com/CCSU-Horizon-Lab/Chrono_Trace",
+      "html_url": "https://github.com/CCSU-HorizonLab/Chrono_Trace",
       "language": "Python",
       "topics": [],
       "stargazers_count": 1,
@@ -15,7 +15,7 @@
     {
       "name": "class-assitant-robot",
       "description": null,
-      "html_url": "https://github.com/CCSU-Horizon-Lab/class-assitant-robot",
+      "html_url": "https://github.com/CCSU-HorizonLab/class-assitant-robot",
       "language": "Python",
       "topics": [],
       "stargazers_count": 0,
@@ -25,7 +25,7 @@
     {
       "name": "tinc-ruoyi-manager",
       "description": "Tinc内网穿透（若依框架）",
-      "html_url": "https://github.com/CCSU-Horizon-Lab/tinc-ruoyi-manager",
+      "html_url": "https://github.com/CCSU-HorizonLab/tinc-ruoyi-manager",
       "language": "Java",
       "topics": [],
       "stargazers_count": 0,
@@ -35,7 +35,7 @@
     {
       "name": "tinc-cluster-manager",
       "description": null,
-      "html_url": "https://github.com/CCSU-Horizon-Lab/tinc-cluster-manager",
+      "html_url": "https://github.com/CCSU-HorizonLab/tinc-cluster-manager",
       "language": "PHP",
       "topics": [],
       "stargazers_count": 1,
@@ -45,7 +45,7 @@
     {
       "name": "tinc-cli-gui",
       "description": null,
-      "html_url": "https://github.com/CCSU-Horizon-Lab/tinc-cli-gui",
+      "html_url": "https://github.com/CCSU-HorizonLab/tinc-cli-gui",
       "language": null,
       "topics": [],
       "stargazers_count": 0,

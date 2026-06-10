@@ -51,7 +51,7 @@ if ("IntersectionObserver" in window && sections.length > 0) {
 
 function getOwnerFrom(track) {
   const owner = track?.dataset.githubOwner;
-  return owner && !owner.includes("{{") ? owner : "CCSU-Horizon-Lab";
+  return owner && !owner.includes("{{") ? owner : "CCSU-HorizonLab";
 }
 
 async function fetchJson(url) {
